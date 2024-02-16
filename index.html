@@ -12,36 +12,27 @@
     <style>
         .image-container {
             position: relative;
+            width: 100vw;
             height: 100vh;
             overflow: hidden;
         }
 
         img {
             width: 100%;
-            height: auto;
+            height: 100%;
             object-fit: cover;
+            object-position: 68%;
         }
 
         .title-container {
-            width: 100vw;
-
-            position: absolute;
-            top: 10%;
-            left: 48%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        @media (max-width: 400px) {
-            .title-container {
-                top: 5%;
-                left: 30%;
-            }
-        }
-
-        @media (max-width: 4600px) {
-            .title-container {
-                top: 5%;
-                left: 40%;
-            }
+        h1 {
+            font-size: 50px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -71,7 +62,7 @@
             data() {
                 return {
                     title: "Hello, Vue",
-                    style: "text-white fs-1 text-center position-absolute top-0 left-0",
+                    style: "text-white text-center position-absolute top-0 left-0",
                     url: "https://4kwallpapers.com/images/wallpapers/jinx-ai-art-arcane-1920x1080-13146.jpg"
                 }
             }
